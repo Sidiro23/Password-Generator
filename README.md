@@ -12,3 +12,5 @@
 #### 6 Tested app on IPhone and works correctly
 #### 7 Deployed website with URL: https://sidiro23.github.io/Password-Generator/
 #### 8 Included screenshot of app
+#### 9 Added an additional variable to remove commas from generated password.Variable found after research on W3 Schools and MDN
+
