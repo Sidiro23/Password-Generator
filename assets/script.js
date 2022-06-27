@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 //character Arrays
 var smallLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-var capitalLetters = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+var capitalLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 var numbers = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9']
 var special = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', '/', ':', ';', "'", '"', '<', '>', ',', '.', '?']
 // variables that i will use in the function for user selections
@@ -99,20 +99,28 @@ else if (sCharacter) {
 };
 //console.log(input);
 var password = [];
+
+
 //generate password using criteria from input & selecting characters from valid arrays(generated from input)
 for (var i = 0; i < passwordLength; i++) {
   var selection = input[Math.floor(Math.random() * input.length)];
   password.push(selection);
-}
-return password;
+  // used an additional variable to remove commas from the password after web research on W3 Schools & MDN
+  var password1 = password.join('')
 
 }
+return password1;
+
+
+}
+
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password1 = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password1;
   
 }
 
